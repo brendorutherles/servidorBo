@@ -1,0 +1,35 @@
+<h3><a class="btn btn-secondary" href="/boletim"><i class="fa fa-plus"></i> Criar Novo</a> Lista de BOs</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>MIKE</th>
+            <th>RESPONSÁVEL</th>
+            <th>GT</th>
+            <th>EFETIVO</th>
+            <th>MATRÍCULA</th>
+            <th> NATUREZA</th>
+            <th>DATA </th>
+            <th>DATA FATO</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.mike}}</td>
+            <td>{{this.responsavel}}</td>
+            <td>{{this.gt}}</td>
+            <td>{{this.efetivo}}</td>
+            <td>{{this.matricula}}</td>
+            <td>{{this.tipoOcorr}}</td>
+            <td>{{this.dataFato}}</td>
+            <td>{{this.dataFato}}</td>
+            
+            <td>
+                <a href="/boletim/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/boletim/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
